@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ccee66;
+    /*cor de fundo*/
+    color: white;
+    /*cor das letras */
+    padding: 20px 160px;
+    /*espaçamento nas lateais*/
+    height: 100vh;
+    /*altura - vh (tela toda)*/
+    font-family: "Noto Sans", sans-serif;
+    overflow: hidden;
+    /*esonde o que sobra-trava a tela*/
+}
+
+body::before {
+    /*before(antes)-after(depois)*/
+    content: '';
+    background-color: #141414;
+    position: absolute;
+    top: 0;
+    left: -600px;
+    transform: rotate(-70deg);
+    width: 100%;
+    height: 120%;
+}
+
+body::after {
+    content: 'Nike';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*deixa a letra no centro na pagina*/
+    color: rgb(0, 0, 0);
+    font-size: 250px;
+    font-weight: bold;
+    /*grossura da fonte*/
+    opacity: 0.5;
+
+}
+
+.logo-nike {
+    width: 145px;
+    margin-top: 30px;
+    /*largura*/
+    z-index: 2;
+    position: relative;
+
+}
+
+h4 {
+    font-size: 30px;
+    /* tamanho do texto*/
+}
+
+h1 {
+    font-size: 80px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 50px;
+    /*margin-top / acima
+    margin-bottom / abaixo
+    margin-left / esquerda
+    margin-right / direita*/
+}
+
+.botao-carrinho {
+    background-color: #a3be52;
+    padding: 10px 20px;
+    border-radius: 20px;
+    /* arredondar as bordas*/
+    font-size: 16px;
+    color: black;
+    cursor: pointer;
+    /* adicionar indicador na seta*/
+    transition: 0.5s;
+    /* ha um retardo na trasiao do efeito*/
+}
+
+.botao-carrinho:hover {
+    /*passando o cursor no botao gera um efeito podendo mudar de cor ou dar transparencia*/
+    opacity: 0.5;
+    /*transparencia do botao*/
+    /* 1-visivel e 0 invisivel*/
+}
+
+.imagem-tenis {
+    width: 800px;
+    transform: rotate(-25deg);
+    /*usado para rotacionar imagem*/
+    filter: drop-shadow(30px 45px 40px #161616);
+    /*usada para adicionar sombra */
+    transition: 1s;
+}
+
+.troca-efeito {
+    opacity: 0;
+    transform: rotate(-25deg) translateY(-30px);
+}
+
+.caixa-principal {
+    display: flex;
+    /*insere um espaço entre as caixas*/
+    justify-content: space-between;
+    /*alinha na horizonta*/
+    align-items: center;
+    /*alinha na vertical*/
+    height: 75%;
+    /*altura*/
+    position: relative;
+    z-index: 1;
+}
+
+.caixa-botoes {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    gap: 20px;
+
+}
+
+.botoes {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+.botoes:active {
+    opacity: 0.5;
+}
+
+.verde {
+    background-color: #ccee66;
+}
+
+.rosa {
+    background-color: #ff9eb5;
+}
+
+.azul {
+    background-color: #58cced;
+}
